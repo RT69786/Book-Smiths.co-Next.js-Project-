@@ -1,0 +1,123 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.vertical-small-box {
+  // border: 2px solid green;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  // border-radius: 12px;
+  overflow: hidden; // keeps image corners rounded
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); // smooth shadow
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  @include breakpoint(desktop) {
+    width: 80%;
+  }
+
+  @include breakpoint(laptop-sm) {
+    width: 90%;
+  }
+
+  @include breakpoint(tablet-lg) {
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 100%;
+    // height: 220px; // optional: consistent image height
+    object-fit: cover;
+  }
+
+  .headings-paragraph-tags {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet-lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 500;
+      width: 75%;
+      line-height: 1.1;
+      padding-top: 20px;
+
+      @include breakpoint(xl-desktop) {
+        width: 100%;
+      }
+
+      @include breakpoint(laptop) {
+        font-size: 22px;
+        width: 100%;
+      }
+
+      @include breakpoint(laptop-sm) {
+        font-size: 20px;
+        width: 85%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        font-size: 35px;
+        width: 100%;
+        text-align: center;
+      }
+
+      @include breakpoint(tablet){
+        font-size: 30px;
+      }
+
+      @include breakpoint(mobile-lg){
+        font-size: 28px;
+      }
+
+      @include breakpoint(mobile-sm){
+        font-size: 26px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #8d8d8d;
+      padding-top: 15px;
+
+      @include breakpoint(tablet-lg) {
+        font-size: 17px;
+        width: 90%;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      @include breakpoint(tablet){
+        font-size: 16px;
+        width: 100%;
+      }
+
+      @include breakpoint(mobile-lg){
+        font-size: 15px;
+      }
+    }
+
+    h6 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 20px;
+      letter-spacing: 0.5px;
+
+      @include breakpoint(tablet-lg) {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

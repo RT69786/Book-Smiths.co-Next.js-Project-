@@ -1,0 +1,51 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+
+.btn-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-shadow {
+  position: absolute;
+  inset: 0;
+  transform: translate(6px, 6px);
+  background: #222;
+  border: 1px solid #111;
+  z-index: 0;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.start-btn {
+  position: relative;
+  z-index: 1;         // sits above .btn-shadow
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: #3E3E3E;
+  background: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.32s ease;
+
+  @include breakpoint(tablet){
+    font-size: 11px;
+  }
+}
+
+.btn-wrap:hover .start-btn {
+  color: #fff;
+  background: linear-gradient(90deg, #a58ed3, #8bc1f2);
+  border-color: transparent;
+  transform: translate(-2px, -2px);
+}
+
+.btn-wrap:hover .btn-shadow {
+  transform: translate(0, 0);
+  background: linear-gradient(90deg, #a58ed3, #8bc1f2);
+}

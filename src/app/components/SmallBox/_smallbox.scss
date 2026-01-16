@@ -1,0 +1,134 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.small-div {
+  position: relative;
+  background-color: #fff;
+  padding: 25px 20px;
+  width: 280px; /* matches your screenshot ratio */
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+
+  @include breakpoint(laptop-sm){
+    padding: 15px 15px;
+  }
+
+  @include breakpoint(tablet-lg){
+    width: 640px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include breakpoint(tablet){
+    width: 500px;
+  }
+
+  @include breakpoint(mobile-lg){
+    width: 400px;
+  }
+
+  @include breakpoint(mobile){
+    width: 380px;
+  }
+
+  @include breakpoint(mobile-sm){
+    width: 350px;
+  }
+
+  @include breakpoint(mobile-xs){
+    width: 330px;
+  }
+
+  @include breakpoint(mobile-xxs){
+    width: 320px;
+  }
+
+  /* Shadow layer behind (black/gray box) */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    z-index: -1;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Optional subtle hover animation */
+  &:hover::after {
+    transform: translate(2px, 2px);
+  }
+
+  i {
+    font-size: 45px;
+    color: #4b4b4b;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #98c8f9, #b39be8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include breakpoint(tablet-lg){
+      font-size: 70px;
+      margin-bottom: 0px;
+    }
+
+    @include breakpoint(tablet){
+      font-size: 60px;
+    }
+
+    @include breakpoint(mobile-lg){
+      font-size: 60px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3E3E3E;
+    margin-bottom: 8px;
+
+    @include breakpoint(tablet-lg){
+      font-size: 25px;
+    }
+
+    @include breakpoint(tablet){
+      font-size: 19px;
+    }
+
+    @include breakpoint(mobile-lg){
+      font-size: 23px;
+    }
+
+    @include breakpoint(mobile-sm){
+      font-size: 22px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    color: #8D8D8D;
+    line-height: 1.4;
+
+    @include breakpoint(tablet-lg){
+      font-size: 17px;
+    }
+
+    @include breakpoint(tablet){
+      font-size: 16px;
+    }
+
+    @include breakpoint(mobile-lg){
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+}

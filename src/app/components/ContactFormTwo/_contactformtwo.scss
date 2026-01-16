@@ -1,0 +1,139 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.black-background-div {
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3e3e3e;
+  width: 75%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); // smooth shadow
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  @include breakpoint(laptop) {
+    width: 85%;
+  }
+
+  @include breakpoint(laptop-md) {
+    width: 90%;
+  }
+
+  @include breakpoint(laptop-sm) {
+    width: 95%;
+  }
+
+  @include breakpoint(tablet-lg) {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    color: #8bc1f2;
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      font-size: 43px;
+      width: 100%;
+    }
+
+    @include breakpoint(laptop) {
+      width: 100%;
+      font-size: 37px;
+    }
+
+    @include breakpoint(laptop-md) {
+      font-size: 36px;
+      padding-bottom: 20px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      font-size: 35px;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 35px;
+      width: 100%;
+    }
+
+    @include breakpoint(mobile-lg) {
+      font-size: 29px;
+      width: 100%;
+    }
+
+    @include breakpoint(mobile-sm) {
+      font-size: 27px;
+    }
+
+    @include breakpoint(mobile-xs) {
+      font-size: 27px;
+    }
+
+    @include breakpoint(mobile-xxs) {
+      font-size: 26px;
+    }
+  }
+
+  .inner-form-two {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 95%;
+
+    @include breakpoint(mobile-lg){
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 15px;
+      border: 1px solid #ddd;
+      background: #fafafa;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        border-color: #9bbcff;
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
+    .row-two {
+      display: flex;
+      gap: 14px;
+
+      input {
+        flex: 1;
+      }
+    }
+
+    button {
+      padding: 14px 18px;
+      width: 100%;
+      background: #333;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 2px;
+      transition: 0.2s ease;
+      background: linear-gradient(90deg, #98c8f9, #b39be8);
+    }
+  }
+}

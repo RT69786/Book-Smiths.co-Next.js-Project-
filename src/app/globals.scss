@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Form elements clean-up */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-red-hat-text), sans-serif;
+  font-weight: 400;
+}
+
+p,
+a,
+span,
+li,
+input,
+textarea {
+  font-family: var(--font-red-hat-text), sans-serif;
+}
+
+h1 {
+  font-family: var(--font-manrope), sans-serif;
+  
+}
+
+h2 {
+  font-family: var(--font-manrope), sans-serif;
+  
+}
+
+h3 {
+  font-family: var(--font-manrope), sans-serif;
+}
+
+
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  margin: 0;
+}

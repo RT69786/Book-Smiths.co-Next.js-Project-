@@ -1,0 +1,388 @@
+@import "../globalStyling/mixin";
+@import "../globalStyling/variables";
+
+.contact-background {
+  //   border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+
+  .for-center-contact {
+    // border: 2px solid purple;
+    max-width: 1800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/pics/bg1.jpg"); // 👈 your image path
+    background-size: cover; // fills entire area, keeps aspect ratio
+    background-position: center; // centers the image
+    background-repeat: no-repeat; // prevents tiling
+    padding: 100px;
+    border-radius: 15px;
+
+    @include breakpoint(xl-desktop) {
+      width: 95%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 95%;
+    }
+
+    @include breakpoint(laptop-sm) {
+      width: 95%;
+    }
+
+    @include breakpoint(mobile-lg) {
+      padding: 70px;
+    }
+
+    .contact-heading {
+      // border: 2px solid green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding-top: 20px;
+      padding-bottom: 10px;
+
+      h2 {
+        font-size: 50px;
+        font-weight: 600;
+        color: #3e3e3e;
+
+        @include breakpoint(mobile-lg) {
+          font-size: 45px;
+        }
+      }
+    }
+
+    .h6-icon-tag {
+      // border: 2px solid blue;
+      display: flex;
+      width: 10%;
+      justify-content: space-between;
+      align-items: center;
+
+      @include breakpoint(desktop) {
+        width: 12%;
+      }
+
+      @include breakpoint(laptop) {
+        width: 13%;
+      }
+
+      @include breakpoint(laptop-md) {
+        width: 14%;
+      }
+
+      @include breakpoint(laptop-sm) {
+        width: 15%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        width: 19%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 27%;
+      }
+
+      @include breakpoint(tablet-sm) {
+        width: 29%;
+      }
+
+      @include breakpoint(mobile-lg) {
+        width: 48%;
+      }
+
+      @include breakpoint(mobile) {
+        width: 55%;
+      }
+
+      @include breakpoint(mobile-sm) {
+        width: 57%;
+      }
+
+      @include breakpoint(mobile-xs) {
+        width: 59%;
+      }
+
+      @include breakpoint(mobile-xxs) {
+        width: 65%;
+      }
+
+      h6 {
+        font-size: 18px;
+        color: #3e3e3e;
+
+        @include breakpoint(mobile-lg) {
+          font-size: 16px;
+        }
+      }
+
+      i {
+        font-size: 18px;
+        color: #3e3e3e;
+      }
+    }
+  }
+}
+
+.contact-part-one {
+  // border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 0px;
+
+  .for-center-contact-part-one {
+    // border: 2px solid blue;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(desktop) {
+      width: 90%;
+    }
+
+    @include breakpoint(laptop-sm) {
+      width: 95%;
+    }
+
+    @include breakpoint(tablet-lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .left-side-five {
+      // border: 2px solid purple;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(tablet-lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: 600;
+        color: #3e3e3e;
+
+        @include breakpoint(desktop) {
+          font-size: 43px;
+          width: 100%;
+        }
+
+        @include breakpoint(laptop) {
+          width: 100%;
+          font-size: 37px;
+        }
+
+        @include breakpoint(laptop-md) {
+          font-size: 36px;
+          padding-bottom: 20px;
+        }
+
+        @include breakpoint(tablet-lg) {
+          font-size: 35px;
+          text-align: center;
+          width: 100%;
+          padding-bottom: 20px;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 35px;
+          width: 90%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 29px;
+          width: 100%;
+        }
+
+        @include breakpoint(mobile-sm) {
+          font-size: 27px;
+        }
+
+        @include breakpoint(mobile-xs) {
+          font-size: 27px;
+        }
+
+        @include breakpoint(mobile-xxs) {
+          font-size: 26px;
+        }
+      }
+
+      p {
+        width: 75%;
+        padding-top: 15px;
+        font-size: 16px;
+        color: #8d8d8d;
+
+        @include breakpoint(desktop) {
+          width: 95%;
+        }
+
+        @include breakpoint(laptop) {
+          font-size: 15px;
+        }
+
+        @include breakpoint(laptop-md) {
+          font-size: 15px;
+          padding-bottom: 30px;
+        }
+
+        @include breakpoint(tablet-lg) {
+          text-align: center;
+          width: 80%;
+          padding-bottom: 10px;
+          padding-top: 0px;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 16px;
+          width: 100%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 15px;
+          width: 100%;
+        }
+
+        @include breakpoint(mobile-sm) {
+          font-size: 15px;
+          width: 95%;
+        }
+
+        @include breakpoint(mobile-xs) {
+          font-size: 15px;
+          width: 100%;
+        }
+      }
+
+      .small-box-parts {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin-top: 30px;
+
+        @include breakpoint(laptop) {
+          width: 90%;
+        }
+
+        @include breakpoint(laptop-md) {
+          width: 100%;
+        }
+
+        @include breakpoint(tablet-lg){
+          width: 60%;
+        }
+
+        @include breakpoint(mobile-lg){
+          width: 100%;
+        }
+
+        .part-one {
+          // border: 2px solid blue;
+          display: flex;
+          flex-direction: column;
+          width: 45%;
+
+          @include breakpoint(tablet-lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          h5 {
+            font-size: 20px;
+            padding-top: 19px;
+            font-weight: 600;
+            color: #3e3e3e;
+          }
+
+          h6 {
+            font-size: 16px;
+            color: #8d8d8d;
+          }
+        }
+
+        .part-two {
+          // border: 2px solid yellow;
+          display: flex;
+          flex-direction: column;
+          width: 45%;
+
+          @include breakpoint(desktop) {
+            width: 50%;
+          }
+
+          @include breakpoint(tablet-lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 45%;
+          }
+
+          h5 {
+            font-size: 20px;
+            padding-top: 19px;
+            font-weight: 600;
+            color: #3e3e3e;
+          }
+
+          h6 {
+            font-size: 16px;
+            color: #8d8d8d;
+
+              @include breakpoint(tablet-lg){
+           text-align: center;
+          }
+          }
+        }
+      }
+    }
+
+    .right-side-six {
+      // border: 2px solid red;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint(tablet-lg){
+        width: 50%;
+        margin-top: 45px;
+      }
+
+      @include breakpoint(tablet){
+        width: 60%;
+      }
+
+      @include breakpoint(tablet-sm){
+        width: 70%;
+      }
+
+      @include breakpoint(mobile-lg){
+        width: 90%;
+      }
+
+      @include breakpoint(mobile-sm){
+        width: 95%;
+      }
+    }
+  }
+}
