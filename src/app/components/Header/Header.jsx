@@ -11,7 +11,7 @@ const Header = () => {
       <section className="for-center-header">
         <div className="div-one">
           <h1>
-            Professional <span>Book Writing</span> Services Canada
+          Professional <span className="animated-underline">Book Writing</span> Services Canada
           </h1>
 
           <p>

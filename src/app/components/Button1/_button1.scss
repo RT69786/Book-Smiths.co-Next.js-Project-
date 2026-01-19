@@ -8,6 +8,8 @@
   // align-items: center;
   // padding: 20px;
   width: 20%;
+  text-decoration: none;
+  cursor: pointer;
 
   @include breakpoint(xl-desktop) {
     width: 25%;

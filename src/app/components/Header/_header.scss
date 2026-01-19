@@ -136,7 +136,7 @@
           font-size: 38px;
         }
 
-        @include breakpoint(mobile){
+        @include breakpoint(mobile) {
           font-size: 37px;
         }
 
@@ -152,12 +152,29 @@
           font-size: 31px;
         }
 
-        span {
+        span.animated-underline {
+          position: relative;
+          display: inline-block;
+
           background: linear-gradient(90deg, #a58ed3, #8bc1f2);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          //   text-fill-color: transparent;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(90deg, #a58ed3, #8bc1f2);
+            border-radius: 2px;
+
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: underlineGrow 1s ease-out forwards;
+          }
         }
       }
 
@@ -242,5 +259,15 @@
         width: 100%;
       }
     }
+  }
+}
+
+
+@keyframes underlineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
